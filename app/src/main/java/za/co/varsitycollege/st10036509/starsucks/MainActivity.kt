@@ -37,5 +37,9 @@ class MainActivity : ComponentActivity() {
             Toast.makeText(this@MainActivity, "MMM Caramel Frapp",
                 Toast.LENGTH_SHORT).show()
         }
+        binding.imgSb6.setOnClickListener() {
+            Toast.makeText(this@MainActivity, "MMM Black Forest Frapp",
+                Toast.LENGTH_SHORT).show()
+        }
     }
 }
