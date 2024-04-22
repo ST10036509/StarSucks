@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">StarSucks</string>
+    <string name="order_now_label">Order Now</string>
+    <string name="title_activity_order_details">OrderDetailsActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_coffee_snaps">CoffeeSnapsActivity</string>
 </resources>
