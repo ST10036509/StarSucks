@@ -1,21 +1,14 @@
 package za.co.varsitycollege.st10036509.starsucks
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.activity.ComponentActivity
-import za.co.varsitycollege.st10036509.starsucks.databinding.ActivityMainBinding
 import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.camera.core.CameraSelector
-import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
-import com.google.common.util.concurrent.ListenableFuture
 import za.co.varsitycollege.st10036509.starsucks.databinding.ActivityMainWithNavDrawerBinding
-import java.util.concurrent.CompletableFuture
 
 //random comment
 
@@ -81,6 +74,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         when(item.itemId) {
             R.id.nav_photo -> openIntent(applicationContext, "",
                 CoffeeSnapsActivity::class.java)
+            R.id.nav_history -> openIntent(applicationContext, "",
+                OrderHistoryActivity::class.java)
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         //returning true marks the item as selected
