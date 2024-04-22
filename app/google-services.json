@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "823298126599",
+    "project_id": "opsc-starsucks",
+    "storage_bucket": "opsc-starsucks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823298126599:android:7935557722a113e1c90ba2",
+        "android_client_info": {
+          "package_name": "za.co.varsitycollege.st10036509.starsucks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtt1PGpR-cQiiGEvLWRvUn8uKkD6MgkWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
