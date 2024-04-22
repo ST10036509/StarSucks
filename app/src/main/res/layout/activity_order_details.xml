@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailsActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:src="@drawable/starsuckslogo"/>
+
+    <TextView
+        android:id="@+id/tv_placeOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:textAlignment="center"
+        android:textColor="@color/startsucksGreen"
+        android:textSize="30sp"
+        android:text="You Ordered"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_orderedBeverage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+
+        <EditText
+            android:id="@+id/et_customerName"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:hint="You Are?"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/et_customerCell"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:hint="Cellphone"
+            android:inputType="number"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/bt_Order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            app:srcCompat="@drawable/smallheart" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
