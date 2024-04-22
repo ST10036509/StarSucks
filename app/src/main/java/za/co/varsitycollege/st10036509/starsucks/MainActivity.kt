@@ -17,6 +17,8 @@ import com.google.common.util.concurrent.ListenableFuture
 import za.co.varsitycollege.st10036509.starsucks.databinding.ActivityMainWithNavDrawerBinding
 import java.util.concurrent.CompletableFuture
 
+//random comment
+
 class MainActivity : AppCompatActivity(), View.OnClickListener,
                     NavigationView.OnNavigationItemSelectedListener {
 
