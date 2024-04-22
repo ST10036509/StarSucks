@@ -17,6 +17,11 @@
         android:theme="@style/Theme.StarSucks"
         tools:targetApi="31">
         <activity
+            android:name=".OrderHistoryActivity"
+            android:exported="false"
+            android:label="@string/title_activity_order_history"
+            android:theme="@style/Theme.StarSucks" />
+        <activity
             android:name=".CoffeeSnapsActivity"
             android:exported="false"
             android:label="@string/title_activity_coffee_snaps"

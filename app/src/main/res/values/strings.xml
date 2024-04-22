@@ -5,4 +5,5 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_coffee_snaps">CoffeeSnapsActivity</string>
+    <string name="title_activity_order_history">OrderHistoryActivity</string>
 </resources>
