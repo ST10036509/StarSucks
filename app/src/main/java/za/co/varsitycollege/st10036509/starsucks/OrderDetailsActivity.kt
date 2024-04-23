@@ -2,20 +2,20 @@ package za.co.varsitycollege.st10036509.starsucks
 
 import android.app.DatePickerDialog
 import android.os.Bundle
+import android.util.Log
 import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.Firebase
 import com.google.firebase.database.database
+import com.google.firebase.firestore.firestore
 import za.co.varsitycollege.st10036509.starsucks.databinding.ActivityOrderDetailsBinding
 import java.util.Calendar
 
 class OrderDetailsActivity : AppCompatActivity() {
 
     var order = Order()
-    val database = Firebase.database("https://opsc-starsucks-default-rtdb.europe-west1.firebasedatabase.app/")
-    //add orders to the path
-    val starSucksRef = database.getReference("orders")
+    val database = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,8 +68,17 @@ class OrderDetailsActivity : AppCompatActivity() {
             if (!order.customerName.isNullOrBlank() && !order.customerCell.isNullOrBlank() &&
                 !order.orderDate.isNullOrBlank() && !order.productName.isNullOrBlank()) {
 
-                //add the order to the list of ours
-                starSucksRef.push().setValue(order)
+                //add order to database
+                database.collection("orders")
+                    .add(order)
+                    .addOnSuccessListener { documentReference ->
+                        Log.d("Order Details",
+                            "DocumentSnapshot added with ID: ${documentReference.id}")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w("Order Details", "Error adding document", e)
+                    }
+
                 Toast.makeText(this@OrderDetailsActivity,
                     "Added to database",
                     Toast.LENGTH_SHORT).show()
